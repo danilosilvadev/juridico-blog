@@ -4,7 +4,7 @@ const { join } = require('path');
 var config = {
     context: join(__dirname, 'src'), // `__dirname` is root of project and `src` is source
     entry: {
-        app: './app.js',
+        app: './App.js',
     },
     output: {
         path: join(__dirname, 'dist'), // `dist` is the destination
