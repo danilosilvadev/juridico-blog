@@ -4,7 +4,6 @@ import './App.css';
 
 import Content from './components/content'
 
-
 class App extends Component {
   render() {
     return (

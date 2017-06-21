@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import Navbar from './navbar'
+
 const main = {
     width: "100%",
     height: "100%",
@@ -11,7 +13,9 @@ const main = {
 class Content extends Component {
     render() {
         return (
-            <div className="content" style={main}></div>
+            <div className="content" style={main}>
+               <Navbar /> 
+            </div>
         )
     }
 }
