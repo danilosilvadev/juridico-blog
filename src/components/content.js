@@ -2,18 +2,16 @@ import React, { Component } from 'react'
 
 import Navbar from './navbar'
 
-const main = {
-    width: "100%",
-    height: "100%",
-    marginTop: "0px",
-    borderTop: "solid red"
-}
+import './responsive.css';
 
+const contentStyles = {
+  
+}
 
 class Content extends Component {
     render() {
         return (
-            <div className="content" style={main}>
+            <div className="col-m-8" className="col-8" style={contentStyles}>
                <Navbar /> 
             </div>
         )
