@@ -11,8 +11,8 @@ const contentStyles = {
 class Content extends Component {
     render() {
         return (
-            <div className="col-m-8" className="col-8" style={contentStyles}>
-               <Navbar /> 
+            <div className="col-8" style={contentStyles}>
+               <Navbar />
             </div>
         )
     }
