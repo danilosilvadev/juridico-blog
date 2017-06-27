@@ -7,7 +7,7 @@ import General from './components/general'
 import './components/responsive.css';
 
 const mainStyle = {
-    borderTop: "3px solid red",
+    borderTop: "3px solid #bb0e0c",
     textAlign: "center"
   }
   //Criar styled components
