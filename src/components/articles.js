@@ -28,35 +28,41 @@ const Section = Styled.section`
 class Articles extends Component {
     constructor() {
         super();
-        this.state = {
+        this.state = { articles: null }
+    }
+
+    componentDidMount() {
+        this.setState = {
             articles: ArticleStore.getAll(),
         };
     }
 
-    render() {
-
-        const { articles } = this.state;
-
-        const articlesTitle = articles.map((article) => {
-            return <li key={article.id}> {article.title} </li>;
-        })
-
-        const articlesContent = articles.map((article) => {
-            return <li key={article.id}> {article.content} </li>;
-        })
-
-        return (
-            <Section>
-                <ul>
-                    <h1><header>{articlesTitle}</header></h1>
-                    <Article>
-                        {articlesContent}
-                        <Button href="">Ler mais</Button>
-                    </Article>
-                </ul>
-            </Section>
-        )
+    checkingArticles(articles) {
+        if (articles == null || articles == "" || articles == undefined ){
+             return true } 
+        else {
+             return false }
     }
-}
+        render() {
 
-export default Articles
+            
+            const { articles } = this.state;
+
+            const articlesContent = checkingArticles(articles) ? "null" : articles.map((article) => {
+                return <li key={article.id}><h1> {article.title} </h1>
+                    {article.content}<Button href="">Ler mais</Button></li>;
+            })
+
+            return (
+                <Section>
+                    <ul>
+                        <Article>
+                            { articlesContent }
+                        </Article>
+                    </ul>
+                </Section>
+            )
+        }
+    }
+
+    export default Articles
