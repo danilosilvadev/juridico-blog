@@ -5,9 +5,9 @@ class ArticleStore extends EventEmitter {
         super();
         this.articles = [
             {
-                id: 154658975,
+                id: 1,
                 title: "E lá vamos nós",
-                text: ` Físicos - 
+                content: ` Físicos - 
                         1 Invisibilidade(mas só pra uma pessoa por vez.)
                         2 Congelar(Mas só superfícies pequenas do tamanho de uma latinha e vc fica sem poder usar por um dia).
                         Pirotecnia(Porém é só umas faíscas).
@@ -16,9 +16,9 @@ class ArticleStore extends EventEmitter {
                         `
             },
             {
-                id: 4578954,
+                id: 2,
                 title: "E lá vamos nós 2",
-                text: ` Físicos - 
+                content: ` Físicos - 
                         1 Invisibilidade(mas só pra uma pessoa por vez.)
                         2 Congelar(Mas só superfícies pequenas do tamanho de uma latinha e vc fica sem poder usar por um dia).
                         Pirotecnia(Porém é só umas faíscas).
@@ -27,9 +27,9 @@ class ArticleStore extends EventEmitter {
                         `
             },
             {
-                id: 154658975,
+                id: 3,
                 title: "E lá vamos nós 3",
-                text: ` Físicos - 
+                content: ` Físicos - 
                         1 Invisibilidade(mas só pra uma pessoa por vez.)
                         2 Congelar(Mas só superfícies pequenas do tamanho de uma latinha e vc fica sem poder usar por um dia).
                         Pirotecnia(Porém é só umas faíscas).

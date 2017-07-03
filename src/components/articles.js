@@ -37,18 +37,22 @@ class Articles extends Component {
 
         const { articles } = this.state;
 
-        const articlesComponents = articles.map((article) => {
-            return <Article key={article.id}{...article} />;
+        const articlesTitle = articles.map((article) => {
+            return <li key={article.id}> {article.title} </li>;
+        })
+
+        const articlesContent = articles.map((article) => {
+            return <li key={article.id}> {article.content} </li>;
         })
 
         return (
             <Section>
                 <ul>
-                    <h1><header>{ articlesComponents }</header></h1>
+                    <h1><header>{articlesTitle}</header></h1>
                     <Article>
-                        {articlesComponents}
+                        {articlesContent}
+                        <Button href="">Ler mais</Button>
                     </Article>
-                    <Button href="">Ler mais</Button>
                 </ul>
             </Section>
         )
