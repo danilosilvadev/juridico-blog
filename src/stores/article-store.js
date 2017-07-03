@@ -1,5 +1,7 @@
 import { EventEmitter } from "events";
 
+import Dispatcher from "../dispatchers/articles-dispatcher";
+
 class ArticleStore extends EventEmitter {
     constructor() {
         super();
@@ -48,8 +50,12 @@ class ArticleStore extends EventEmitter {
         return this.articles;
     }
 
+    hanleActions(action){
+        console.log("Blog actions", action);
+    }
 }
 
 const articleStore = new ArticleStore();
-
+Dispatcher.register(articleStore.hanleActions.bind(articleStore));
+window.Dispatcher = Dispatcher;
 export default articleStore
