@@ -50,12 +50,12 @@ class ArticleStore extends EventEmitter {
         return this.articles;
     }
 
-    hanleActions(action){
+    handleActions(action){
         console.log("Blog actions", action);
     }
 }
 
 const articleStore = new ArticleStore();
-Dispatcher.register(articleStore.hanleActions.bind(articleStore));
+Dispatcher.register(articleStore.handleActions.bind(articleStore));
 window.Dispatcher = Dispatcher;
 export default articleStore

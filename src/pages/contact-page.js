@@ -43,11 +43,11 @@ class ContactPage extends Component {
     }
 
     handleSubmit(event) {
+        event.preventDefault();
         alert('Nome: ' + this.state.name);
         alert('Email: ' + this.state.email);
         alert('Message: ' + this.state.message);
 
-        event.preventDefault();
     }
 
     render() {
