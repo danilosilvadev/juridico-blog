@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import Styled from 'styled-components'
 
 import Articles from './articles'
+import About from '../pages/about-page'
+import Contact from '../pages/contact-page'
+
 
 import {
     BrowserRouter as Router,
@@ -9,17 +12,11 @@ import {
     Link
 } from 'react-router-dom'
 
-const sobre = () => (
-    <div>
-        <h2>Sobre</h2>
-    </div>
-)
-
-const contato = () => (
+/* const contato = () => (
     <div>
         <h2>Contato</h2>
     </div>
-)
+) */ //Sample about create pages without new components
 
 const UL = Styled.ul`
         list-style-type: none;
@@ -57,8 +54,8 @@ class Navbar extends Component {
                     </UL></h3>
 
                     <Route exact path="/" component={Articles} />
-                    <Route path="/sobre" component={sobre} />
-                    <Route path="/contato" component={contato} />
+                    <Route path="/sobre" component={About} />
+                    <Route path="/contato" component={Contact} />
                 </nav>
             </Router>
         )
