@@ -1,5 +1,19 @@
 import React, { Component } from 'react'
 
+import Styled from 'styled-components'
+
+const Label = Styled.label`
+            display: -webkit-flex;
+            display: flex;
+            margin-top: 15px;
+            justify-content: center;
+`
+
+const Form = Styled.form`
+        align-items: center;
+        margin-top: 10%;
+`
+
 class ContactPage extends Component {
     constructor(props) {
         super(props);
@@ -38,20 +52,19 @@ class ContactPage extends Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
-
-                <label>
+            <Form onSubmit={this.handleSubmit}>
+                <Label>
                     Nome:
                     <input type="text" onChange={this.handleChangeName} /><br />
-                </label><label>
+                </Label><Label>
                     E-mail:
-                    <input type="text" onChange={this.handleChangeEmail} /><br /></label><label>
+                    <input type="text" onChange={this.handleChangeEmail} /><br /></Label><Label>
                     Mensagem:
                     <textarea onChange={this.handleChangeMessage} />
-                </label><br />
+                </Label><br />
                 <input type="submit" value="Submit" />
 
-            </form>
+            </Form>
         )
     }
 }
