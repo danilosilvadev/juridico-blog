@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Styled from 'styled-components'
 
-import ArticleStore from '../stores/article-store'
+import ArticleStore from '../stores/articles-store'
 
 const Article = Styled.article`
         margin-left: 25px;
