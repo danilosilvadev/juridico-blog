@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import Styled from 'styled-components'
 import ValidatingFields from '../utils/validating-fields'
 
-import * as ArticlesActions from '../actions/articles-actions'
+import * as ArticlesActions from '../actions/article-actions'
 
 const Label = Styled.label`
             display: -webkit-flex;
@@ -64,7 +64,7 @@ const Button = Styled.input`
 
 class DrashboardPage extends Component {
 
-   constructor(props) {
+    constructor(props) {
         super(props);
         this.state = {
             title: '',
@@ -95,8 +95,8 @@ class DrashboardPage extends Component {
         }
     }
 
-    createArticle(){
-        ArticlesActions.createArticle(Date.now())
+    createArticle() {
+        ArticlesActions.createArticle(456, "title test", "example of an article");
     }
 
     render() {
