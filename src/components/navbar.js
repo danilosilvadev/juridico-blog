@@ -4,6 +4,7 @@ import Styled from 'styled-components'
 import Articles from './articles'
 import About from '../pages/about-page'
 import Contact from '../pages/contact-page'
+import Drashboard from '../pages/drashboard-page'
 
 
 import {
@@ -56,6 +57,7 @@ class Navbar extends Component {
                     <Route exact path="/" component={Articles} />
                     <Route path="/sobre" component={About} />
                     <Route path="/contato" component={Contact} />
+                    <Route path="/drashboard" component={Drashboard} />
                 </nav>
             </Router>
         )

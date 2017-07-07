@@ -29,21 +29,11 @@ const Span = Styled.span`
 `
 
 const H1 = Styled.span`
-        font-size: 80px;
+        font-size: 60px;
         display: -webkit-flex;
         display: flex;
         font-weight: bold;
-        flex-wrap: wrap;
-        margin-left: 10px;
-        margin-right: 10px;
-
-`
-
-const Header = Styled.div`
-        display: -webkit-flex;
-        display: flex;
-        flex-wrap: nowrap;
-        text-align: left;
+        justify-content: center;
 `
 
 /*function upd() {
@@ -59,7 +49,7 @@ const Title = Styled.span`
     font-size: 40px;
     display: -webkit-flex;
     display: flex;
-    color: #bb0e0c;
+    color: #f9a19f;
     font-weight: bold;
 `
 
@@ -84,10 +74,9 @@ class AboutPage extends Component {
     render() {
         return (
             <div>
-                <Header>
-                    <H1>Dr. Rogelito D. da Silva</H1><br />
-                </Header>
-                <SubTitle>Advogado, subtenente, pai e um eterno aprendiz.</SubTitle> <br /><br />
+                <H1>Dr. Rogelito D. da Silva</H1><br />
+                <SubTitle>Advogado, subtenente, pai e um eterno aprendiz.</SubTitle>
+                <br /><br />
                 <Title>Sobre mim</Title>
 
                 <Bio>

@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 
 import Styled from 'styled-components'
-
 import ValidatingFields from '../utils/validating-fields'
+
+import * as ArticlesActions from '../actions/articles-actions'
 
 const Label = Styled.label`
             display: -webkit-flex;
@@ -13,7 +14,6 @@ const Label = Styled.label`
             color:  #f9a19f;
             font-weight: bold;
             display: block;
-
 `
 
 const Input = Styled.input`
@@ -62,56 +62,52 @@ const Button = Styled.input`
             outline: none;
 `
 
-class ContactPage extends Component {
-    constructor(props) {
+class DrashboardPage extends Component {
+
+   constructor(props) {
         super(props);
         this.state = {
-            name: '',
-            email: '',
-            message: ''
+            title: '',
+            article: ''
         };
 
-        this.handleChangeName = this.handleChangeName.bind(this);
-        this.handleChangeEmail = this.handleChangeEmail.bind(this);
-        this.handleChangeMessage = this.handleChangeMessage.bind(this);
+        this.handleChangeTitle = this.handleChangeTitle.bind(this);
+        this.handleChangeArticle = this.handleChangeArticle.bind(this);
 
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    handleChangeName(event) {
-        this.setState({ name: event.target.value });
+    handleChangeTitle(event) {
+        this.setState({ title: event.target.value });
     }
 
-    handleChangeEmail(event) {
-        this.setState({ email: event.target.value });
-    }
-
-    handleChangeMessage(event) {
-        this.setState({ message: event.target.value });
+    handleChangeArticle(event) {
+        this.setState({ article: event.target.value });
     }
 
     handleSubmit(event) {
         event.preventDefault();
-        if (ValidatingFields.isEmptyOrNull(this.state.name, this.state.email, this.state.message)) {
+        if (ValidatingFields.isEmptyOrNullDrashboard(this.state.title, this.state.article)) {
             return alert('Preencha os campos');
         } else {
-            alert('Nome: ' + this.state.name);
-            alert('Email: ' + this.state.email);
-            alert('Message: ' + this.state.message);
+            alert('Nome: ' + this.state.title);
+            alert('Message: ' + this.state.article);
         }
+    }
+
+    createArticle(){
+        ArticlesActions.createArticle(Date.now())
     }
 
     render() {
         return (
             <Form onSubmit={this.handleSubmit}>
                 <Label>
-                    <Span>Qual o seu nome?</Span>
-                    <Input type="text" onChange={this.handleChangeName} />
+                    <Span>Título</Span>
+                    <Input type="text" onChange={this.handleChangeTitle} />
                 </Label><Label>
-                    <Span>Me diz um e-mail seu pra retorno:</Span>
-                    <Input type="text" onChange={this.handleChangeEmail} /></Label><Label>
-                    <Span>Escreva sua mensagem:</Span>
-                    <Textarea onChange={this.handleChangeMessage} />
+                    <Span>Postagem</Span>
+                    <Textarea onChange={this.handleChangeArticle} />
                 </Label><br />
                 <Button type="submit" value="Enviar" />
             </Form>
@@ -119,4 +115,4 @@ class ContactPage extends Component {
     }
 }
 
-export default ContactPage
+export default DrashboardPage
