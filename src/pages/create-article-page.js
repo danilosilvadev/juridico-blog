@@ -5,6 +5,10 @@ import ValidatingFields from '../utils/validating-fields'
 
 import * as ArticlesActions from '../actions/article-actions'
 
+import ArticlePage from './article-page'
+import Article from '../stores/article-store'
+
+
 const Label = Styled.label`
             display: -webkit-flex;
             display: flex;
@@ -102,6 +106,7 @@ class CreateArticle extends Component {
 
     render() {
         return (
+            <div>
             <Form onSubmit={this.handleSubmit}>
                 <Label>
                     <Span>Título</Span>
@@ -112,6 +117,9 @@ class CreateArticle extends Component {
                 </Label><br />
                 <Button type="submit" value="Enviar" />
             </Form>
+            <ArticlePage />
+            { Article.article.title}
+            </div>
         )
     }
 }

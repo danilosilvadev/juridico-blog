@@ -10,12 +10,10 @@ export function createArticle(title, article){
     })
 }
 
-export function deleteArticle(id, title, article){
+export function deleteArticle(id){
     Dispatcher.dispatch({
         type: ActionTypes.DELETE_ARTICLE,
-        id,
-        title,
-        article
+        id
     })
 }
 
