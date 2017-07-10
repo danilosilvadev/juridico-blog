@@ -62,7 +62,7 @@ const Button = Styled.input`
             outline: none;
 `
 
-class DrashboardPage extends Component {
+class CreateArticle extends Component {
 
     constructor(props) {
         super(props);
@@ -115,4 +115,4 @@ class DrashboardPage extends Component {
     }
 }
 
-export default DrashboardPage
+export default CreateArticle

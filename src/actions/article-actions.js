@@ -1,8 +1,10 @@
 import Dispatcher from '../dispatchers/articles-dispatcher'
 
+import ActionTypes from './article-action-types'
+
 export function createArticle(id, title, article){
     Dispatcher.dispatch({
-        type: CREATE_ARTICLE,
+        type: ActionTypes.CREATE_ARTICLE,
         id,
         title,
         article
@@ -11,7 +13,7 @@ export function createArticle(id, title, article){
 
 export function deleteArticle(id, title, article){
     Dispatcher.dispatch({
-        type: DELETE_ARTICLE,
+        type: ActionTypes.DELETE_ARTICLE,
         id,
         title,
         article
@@ -20,7 +22,7 @@ export function deleteArticle(id, title, article){
 
 export function editArticle(id, title, article){
     Dispatcher.dispatch({
-        type: EDIT_ARTICLE,
+        type: ActionTypes.EDIT_ARTICLE,
         id,
         title,
         article
