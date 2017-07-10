@@ -2,10 +2,9 @@ import Dispatcher from '../dispatchers/articles-dispatcher'
 
 import ActionTypes from './article-action-types'
 
-export function createArticle(id, title, article){
+export function createArticle(title, article){
     Dispatcher.dispatch({
         type: ActionTypes.CREATE_ARTICLE,
-        id,
         title,
         article
     })

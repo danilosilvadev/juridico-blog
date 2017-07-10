@@ -92,6 +92,7 @@ class CreateArticle extends Component {
         } else {
             alert('Nome: ' + this.state.title);
             alert('Message: ' + this.state.article);
+            ArticlesActions.createArticle(this.state.title, this.state.article);
         }
     }
 

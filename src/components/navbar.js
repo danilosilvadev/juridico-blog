@@ -5,6 +5,7 @@ import Articles from './articles'
 import About from '../pages/about-page'
 import Contact from '../pages/contact-page'
 import CreateArticle from '../pages/create-article-page'
+import Article from '../pages/article-page'
 
 
 import {
@@ -58,6 +59,7 @@ class Navbar extends Component {
                     <Route path="/sobre" component={About} />
                     <Route path="/contato" component={Contact} />
                     <Route path="/create" component={CreateArticle} />
+                    <Route path="/article" component={Article} />
                 </nav>
             </Router>
         )

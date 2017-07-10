@@ -2,18 +2,35 @@ import { EventEmitter } from "events";
 
 import Dispatcher from "../dispatchers/articles-dispatcher";
 
+import ActionTypes from '../actions/article-action-types'
+
+import Counter from '../utils/counter'
+
 class ArticleStore extends EventEmitter {
     constructor() {
         super();
-        this.articles = [{
+        this.article = {
             id: '',
             title: '',
             content: ''
-        }]
+        }
     }
 
-    handleActions(action){
-        console.log("Blog actions", action);
+    handleActions(action) {
+        switch (action) {
+            case ActionTypes.CREATE_ARTICLE:
+                this.setState.article.id = Counter.increment;
+                this.setState.article.title = action.title;
+                this.setState.article.content = action.content;
+                console.log("adicionado")
+                break;
+            case ActionTypes.DELETE_ARTICLE:
+                console.log("deletando")
+                break;
+            case ActionTypes.EDIT_ARTICLE:
+                console.log("editando")
+                break;
+        }
     }
 }
 
