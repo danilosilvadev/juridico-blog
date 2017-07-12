@@ -1,4 +1,4 @@
-import { EventEmitter } from "events";
+/*import { EventEmitter } from "events";
 
 import Dispatcher from "../dispatchers/contact-dispatcher";
 
@@ -30,4 +30,4 @@ class ContactStore extends EventEmitter {
 const contactStore = new ContactStore();
 Dispatcher.register(contactStore.handleActions.bind(contactStore));
 window.Dispatcher = Dispatcher;
-export default contactStore
+export default contactStore*/

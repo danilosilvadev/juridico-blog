@@ -6,7 +6,7 @@ import ValidatingFields from '../utils/validating-fields'
 import * as ArticlesActions from '../actions/article-actions'
 
 import ArticlePage from './article-page'
-import Article from '../stores/article-store'
+import Article from '../stores/article-reducer'
 
 
 const Label = Styled.label`
@@ -118,7 +118,7 @@ class CreateArticle extends Component {
                 <Button type="submit" value="Enviar" />
             </Form>
             <ArticlePage />
-            { Article.article.title}
+            { Article.state.article.title}
             </div>
         )
     }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Styled from 'styled-components'
 
-import ArticleStore from '../stores/articles-store'
+import ArticleReducer from '../stores/article-reducer'
 
 const Article = Styled.article`
         margin-left: 25px;
@@ -39,7 +39,7 @@ class Articles extends Component {
 
     loadArticles() {
         this.setState({
-            articles: ArticleStore.getAll()
+            articles: ArticleReducer.getAll()
         });
     }
 
@@ -82,7 +82,7 @@ class Articles extends Component {
                 <section>
                     <ul>
                         <Article>
-                            {articlesContent}
+                            {articles}
                         </Article>
                     </ul>
                 </section>

@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
 
-import Article from '../stores/article-store'
+import Article from '../stores/article-reducer'
 
 class ArticlePage extends Component {
     render() {
+        const Art  = Article.state.article;
         return (
             <section>
-                <title>{Article.article.title}</title>
+                <title>{Art.title}</title>
                 <article>
-                    {Article.article.content}
+                    {Art.content}
                 </article>
             </section>
         )
