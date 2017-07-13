@@ -15,4 +15,4 @@ const List = connect(
     mapStateToProps
 )(Articles)
 
-export default List
+export default getAll

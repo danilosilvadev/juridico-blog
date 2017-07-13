@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import Styled from 'styled-components'
 import PropTypes from 'prop-types'
-
-import ArticleReducer from '../reducers/article-reducer'
+import List from '../containers/ArticlesList'
 
 const Article = Styled.article`
         margin-left: 25px;
@@ -31,9 +30,61 @@ const Span = Styled.span`
     display: flex;
     text-align: left;
 `
+const articlesList = { articles: List.getAll() }
 
-class Articles extends Component {
-    constructor() {
+const loadArticleList = articles => {
+    const articlesContent = articles.map((article) => {
+        return <ArticlesList key={article.id}>
+            <h2>{article.title}</h2>
+            <Span>{article.content}</Span><br />
+            <Button href="">Ler mais</Button>
+        </ArticlesList>;
+    });
+    return articlesContent;
+}
+
+const checkingArticles = articles => {
+    if (articles === null || articles === "" || articles === undefined) {
+        return true
+    }
+    else {
+        return false
+    }
+
+    render.propTypes = {
+        articles: PropTypes.func.isRequired
+    }
+}
+
+const Articles = () => {
+    if (this.checkingArticles(articles)) {
+        return (
+            <section>
+                <h1>List is empty</h1>
+            </section>
+        )
+    } else {
+        const articlesContent = this.loadArticleList(articles);
+        return (
+            <section>
+                <ul>
+                    <Article>
+                        {articles}
+                    </Article>
+                </ul>
+            </section>
+        )
+    }
+}
+
+articlesList.PropTypes = {
+    onLoad: PropTypes.func.isRequired
+}
+
+export default Articles
+
+/*
+constructor() {
         super();
         this.state = { articles: null }
     }
@@ -55,6 +106,7 @@ class Articles extends Component {
         return articlesContent;
     }
 
+    //make this in the component father
     componentWillMount() {
         this.loadArticles();
     }
@@ -93,8 +145,4 @@ class Articles extends Component {
                 </section>
             )
         }
-    }
-
-}
-
-export default Articles
+    } */
