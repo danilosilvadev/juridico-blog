@@ -44,26 +44,25 @@ const link = {
     color: "#bb0e0c"
 }
 
-class Navbar extends Component {
-    render() {
-        return (
-            <Router>
-                <nav>
-                    <h3><UL>
-                        <LI><Link to="/" style={link}>Home</Link></LI>
-                        <LI><Link to="/sobre" style={link}>Sobre</Link></LI>
-                        <LI><Link to="/contato" style={link}>Contato</Link></LI>
-                    </UL></h3>
+const Navbar = () => {
 
-                    <Route exact path="/" component={Articles} />
-                    <Route path="/sobre" component={About} />
-                    <Route path="/contato" component={Contact} />
-                    <Route path="/create" component={CreateArticle} />
-                    <Route path="/article" component={Article} />
-                </nav>
-            </Router>
-        )
-    }
+    return (
+        <Router>
+            <nav>
+                <h3><UL>
+                    <LI><Link to="/" style={link}>Home</Link></LI>
+                    <LI><Link to="/sobre" style={link}>Sobre</Link></LI>
+                    <LI><Link to="/contato" style={link}>Contato</Link></LI>
+                </UL></h3>
+
+                <Route exact path="/" component={Articles} />
+                <Route path="/sobre" component={About} />
+                <Route path="/contato" component={Contact} />
+                <Route path="/create" component={CreateArticle} />
+                <Route path="/article" component={Article} />
+            </nav>
+        </Router>
+    )
 }
 
 export default Navbar

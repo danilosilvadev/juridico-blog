@@ -8,9 +8,8 @@ class ArticleReducer {
     reducer = (state = { id: "", title: "", content: "" }, action) => {
         switch (action.type) {
             case ActionTypes.CREATE_ARTICLE: {
-                state = { ...state, id: Counter.increment, title: action.title, content: action.content }
-                var articles = articles.unshift({ id: Counter.increment, title: action.title, content: action.content, list: [{}] });
-
+                return [...state, {id: Counter.increment, title: action.title, content: action.content }]
+                //var articles = articles.unshift({ id: Counter.increment, title: action.title, content: action.content, list: [{}] });
             }
             case ActionTypes.DELETE_ARTICLE: {
                 state = { ...state, id: "", title: "", content: "" }
@@ -22,9 +21,9 @@ class ArticleReducer {
 
     }
 
-    getAll() {
-        return ArticleReducer.articles.list;
-    }
+    //getAll() {
+    //    return ArticleReducer.articles.list;
+   // }
 }
 
 

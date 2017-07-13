@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import Styled from 'styled-components'
+import PropTypes from 'prop-types'
 
-import ArticleReducer from '../stores/article-reducer'
+import ArticleReducer from '../reducers/article-reducer'
 
 const Article = Styled.article`
         margin-left: 25px;
@@ -65,11 +66,15 @@ class Articles extends Component {
         else {
             return false
         }
+
+        render.propTypes = {
+            articles: PropTypes.func.isRequired
+        }
     }
     render() {
 
         const { articles } = this.state;
-
+        
         if (this.checkingArticles(articles)) {
             return (
                 <section>
@@ -89,6 +94,7 @@ class Articles extends Component {
             )
         }
     }
+
 }
 
 export default Articles

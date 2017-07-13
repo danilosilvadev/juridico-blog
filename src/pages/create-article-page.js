@@ -6,7 +6,7 @@ import ValidatingFields from '../utils/validating-fields'
 import * as ArticlesActions from '../actions/article-actions'
 
 import ArticlePage from './article-page'
-import Article from '../stores/article-reducer'
+import Article from '../reducers/article-reducer'
 
 
 const Label = Styled.label`

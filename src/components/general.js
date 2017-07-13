@@ -5,21 +5,19 @@ import Content from './content'
 import './responsive.css';
 
 const generalStyle = {
-   // marginLeft: "16.66%"
-   display: "flex",
-   JustifyContent: "center",
-   flexDirection: "row"
+    // marginLeft: "16.66%"
+    display: "flex",
+    JustifyContent: "center",
+    flexDirection: "row"
 }
 
-class General extends Component {
-    state = {  }
-    render() {
-        return (
-            <div >
-            <Content style={generalStyle}/>
-            </div>
-        )
-    }
+const General = () => {
+
+    return (
+        <div >
+            <Content style={generalStyle} />
+        </div>
+    )
 }
 
 export default General
